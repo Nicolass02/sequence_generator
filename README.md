@@ -1,3 +1,8 @@
+# Sequence Generator
 This sequence generator is used to create tmaps.
 
-instrcuctions are inside sequence generator folder, written on the README file of said repository
+# Folder "environments"
+The folder "environments" contains conda installation environments in order to use the python files without problems
+
+# Folder "sequence_generator"
+I The folder "sequence_generator" are the python files as well as a other README file with further instructions how to use them.
