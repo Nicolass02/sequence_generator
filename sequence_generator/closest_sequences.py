@@ -1,33 +1,18 @@
 #!/usr/bin/env python3
 
 from rdkit import Chem 
-from rdkit.Chem import rdMolDescriptors
-from rdkit.Chem import DataStructs
-from rdkit.Chem import Descriptors
-from mxfp.mxfp import MXFPCalculator
 import random
-import numpy as np
-import pandas as pd
-from tqdm import tqdm 
-import os
 import re
 import itertools
-from map4 import MAP4Calculator
 import datetime
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 import string
-
-map4 = MAP4Calculator()
-tqdm.pandas()
+root = Tk()
+root.withdraw()
 
 bb = list()
 shorts = list()
-
-
-# Create the Tkinter root window
-root = Tk()
-root.withdraw()
 
 # Set default file path
 default_file_path = "aminoacids.txt"
@@ -53,24 +38,13 @@ with open(file_path, 'r') as file:
 
 
 #declare calculation-methods
-tqdm.pandas()
-mxfp = MXFPCalculator()
 original = str()
-
-df = pd.DataFrame()
 sequences = set()
 
-types = ["linear", "cyclic"]
 
 #choose sequence type
-t = types[0] #types[1]
-#load sample
-
-#choose name for file
-
-
-#enter sequence
-original = "AVLIMFYWSTNQCGPRHKDE" 
+t = "linear" #"linear" and "cyclic" are the two options
+original = "AVLIMFYWSTNQCGPRHKDE" #enter ID sequence
 
 def split_string_at_capitals(string):
     # Use regular expression to split the string at each capital letter
@@ -122,13 +96,11 @@ for x in itertools.product(shorts, repeat=1):
             sequences.add(sequence)
             
             
-#create sequences 2 differences
-len(sequences)
+#create sequences with 2 differences
 for x in itertools.product(shorts, repeat=2):
     for y in itertools.combinations(range(len(original)), 2):
         if list(x) != [original[y[0]], original[y[1]]]:
             temp_len = len(sequences)
-            print(temp_len)
             mutation = original[:y[0]] + x[0] + original[y[0] + 1:y[1]] + x[1] + original[y[1] + 1:]
             sequence = ""
 

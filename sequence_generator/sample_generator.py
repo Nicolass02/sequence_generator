@@ -1,7 +1,6 @@
 
 #!/usr/bin/env python3
 import random
-import numpy as np
 from rdkit import Chem 
 import datetime
 import string
@@ -11,12 +10,6 @@ from tkinter.filedialog import askopenfilename
 root = Tk()
 root.withdraw()
 
-
-#random seed can be used in orther to recreate indentical results anytime
-"""random.seed(42)
-np.random.seed(42)"""
-
-moltype = ["linear", "cyclic"]
 bb = list()
 
 # Create the Tkinter root window
@@ -45,10 +38,11 @@ with open('bb_with_h.txt', 'r') as file:
 
 sample = set()
 
+
 # Generate sample with size and length of choice
 list_size = 1000 #recommended not to go over 50'000
 seq_len = 10 #never smaller than 2
-type = "linear" #"cyclic" is the other option
+type = "linear" #"linear" and "cyclic" are the two options
 
 #create samples
 while len(sample) < list_size:
