@@ -9,6 +9,7 @@ If you haven't installed your environment yet, it would be recommended to do it 
 Unless you already have a SMILES sample, you can start with either "sample_generator.py" or "close_sequences.py". The first file is used for random sequences, while the other creates sequences that are close to a sequence of your choice.
 
 If you choose sample_generator.py, use the text file "bb.txt". It contains a list of custom SMILES building blocks. Here is an example:
+
 ```
 N(CC1=CC(Cl)=CC(Cl)=C1)CC(=O)
 N(CC1=CC=C(O)C=C1)CC(=O)
@@ -59,6 +60,6 @@ Other than choosing the files from the right folder, there is nothing else you n
 ## Tamp generator
 Using the last python script (tmap_generator.ipynb), the final step is choosing the pickled file from the directory map4_plus_descriptors," which is then used to create a tmap. The tmap is then converted into an HTML file that can be opened locally.
 
-Depending on how many sequences the pickled file contains, the structure of the tmap may need to be adjusted. The numbers in the lines from 53 to 56 can be changed in order to show more compatible results for a certain file.
+Depending on how many sequences the pickled file contains, the structure of the tmap may need to be adjusted. The numbers in the lines from 49 to 52 can be changed in order to show more compatible results for a certain file.
 
 Due to some circumstances, the script could only be used inside a Jupyter Notebook file. It is recommended to use Visual Studio Code to execute that file. If you do, please install the extensions for Jupyter Notebook and Python to prevent any problems. Also, make sure that the kernel in which you run the code is the Conda environment that was previously set up.
