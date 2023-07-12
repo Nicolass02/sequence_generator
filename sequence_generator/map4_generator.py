@@ -15,7 +15,6 @@ import sys
 root = Tk()
 root.withdraw()
 #set up lists and calculation methods
-temp = list()
 df = pd.DataFrame()
 tqdm.pandas()
 map4 = MAP4Calculator()
@@ -54,7 +53,7 @@ def calc_map4(f, fname):
  
 
 #choose file
-file_path = askopenfilename(title="choose samples", filetypes=[("pickled files", "*.pkl")])
+file_path = askopenfilename(title="choose samples", filetypes=[("text files", "*.txt")])
 
 
 if not file_path:
@@ -63,9 +62,7 @@ if not file_path:
     
 
 #choose textfile 
-filename = file_path.split("/")[-1:]
-
-
+filename = file_path.split("/")[-1]
 
 #call map4 calculation method
 calc_map4(file_path, filename)

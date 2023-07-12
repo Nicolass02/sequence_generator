@@ -2,13 +2,10 @@
 
 from rdkit import Chem 
 from rdkit.Chem import rdMolDescriptors
-from rdkit.Chem import DataStructs
 from rdkit.Chem import Descriptors
 from tqdm import tqdm 
-import numpy as np
 import pandas as pd
 from tqdm import tqdm 
-import os
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 import sys
@@ -79,7 +76,7 @@ if not file_path:
     sys.exit("no file chosen")
     
 
-filename = file_path.split("/")[-1:]
+filename = file_path.split("/")[-1]
 
 
 
