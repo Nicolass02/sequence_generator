@@ -44,7 +44,7 @@ sequences = set()
 
 #choose sequence type
 t = "linear" #"linear" and "cyclic" are the two options
-original = "AVLIMFYWSTNQCGPRHKDE" #enter ID sequence
+original = "NQCGPRHKDE" #enter ID sequence
 
 def split_string_at_capitals(string):
     # Use regular expression to split the string at each capital letter
@@ -78,7 +78,7 @@ for x in itertools.product(shorts, repeat=1):
         count = sum(1 for a, b in zip(list(x), [original[y[0]]]) if a != b) 
         if count == 1:
             temp_len = len(sequences)
-            mutation = original[:y[0]] + x[0] + original[y[0] + 1:]
+            mutation = original[:y[0]] + [x[0]] + original[y[0] + 1:]
             sequence = ""
 
             for ind in mutation:
@@ -101,7 +101,7 @@ for x in itertools.product(shorts, repeat=2):
     for y in itertools.combinations(range(len(original)), 2):
         if list(x) != [original[y[0]], original[y[1]]]:
             temp_len = len(sequences)
-            mutation = original[:y[0]] + x[0] + original[y[0] + 1:y[1]] + x[1] + original[y[1] + 1:]
+            mutation = original[:y[0]] + [x[0]] + original[y[0] + 1:y[1]] + [x[1]] + original[y[1] + 1:]
             sequence = ""
 
             for ind in mutation:

@@ -57,6 +57,8 @@ After creating your sample, the text file must undergo certain calculations. Sta
 Other then choosing the files from the right folder there is nothing you need to do other than wait that the calculation are finished.
 
 ## Tamp generator
-For using the last python script (tmap_generator.py) the final step the pickled file from the directory "map4_plus_descriptors" is then used to create a tmap. The tmap is then converted into an HTML file that can be opened locally. 
+For using the last python script (tmap_generator.ipynb) the final step the pickled file from the directory "map4_plus_descriptors" is then used to create a tmap. The tmap is then converted into an HTML file that can be opened locally. 
 
 Depending on how many sequences the pickled file contains, the structure of the tmap may need to be adjusted. The numbers in the lines from 53 to 56 can be changed in order to show more compatible results to a certain file.
+
+Due to some circumstances the script could only be used inside a jupyter notbook file. It is recommended to use Visual Studio Code to execute taht file. If you do please install the extensions for Jupyter Notebook and Python to prevent any problem. Also make sure that the kernel in which you run the code is the conda environment that was previously set up.
