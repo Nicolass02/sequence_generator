@@ -63,3 +63,6 @@ Using the last python script (tmap_generator.ipynb), the final step is choosing 
 Depending on how many sequences the pickled file contains, the structure of the tmap may need to be adjusted. The numbers in the lines from 49 to 52 can be changed in order to show more compatible results for a certain file.
 
 Due to some circumstances, the script could only be used inside a Jupyter Notebook file. It is recommended to use Visual Studio Code to execute that file. If you do, please install the extensions for Jupyter Notebook and Python to prevent any problems. Also, make sure that the kernel in which you run the code is the Conda environment that was previously set up.
+
+## Examples
+An tmap (tmap.html) example can be found in the folder "tmaps". It was made from the textfile "tmap.txt" wich contains various sequences of differnt combination lenghts as well as variation between linear and cyclic sequences (as long as the sequences are the same ones, putting them in a specific order will not affect the result). The textfile contains roufly 33'000 sequences. Another exaple made with around 320'000 sequnces can be found under the following link: [link](link)
