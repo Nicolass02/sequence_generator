@@ -5,7 +5,6 @@ from rdkit.Chem import rdMolDescriptors
 from rdkit.Chem import Descriptors
 from tqdm import tqdm 
 import pandas as pd
-from tqdm import tqdm 
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 import sys

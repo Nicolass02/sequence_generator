@@ -26,7 +26,7 @@ if not file_path:
     file_path = default_file_path
 
 #load building blocks
-with open('bb_with_h.txt', 'r') as file: 
+with open(file_path, 'r') as file: 
     file_lines = file.readlines()
     for line in file_lines:
         mol = Chem.MolFromSmiles(line)
